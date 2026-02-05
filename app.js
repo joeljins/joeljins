@@ -1,5 +1,3 @@
-gallery = ""
-
 const gallery = images
     .map(image => `<img src="${image}" width="200" height="200">`)
     .join("\n");
