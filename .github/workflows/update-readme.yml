@@ -19,7 +19,7 @@ jobs:
           node-version: '20'
 
       - name: Run Gallery Script
-        run: node scripts/build.js # Make sure this matches your script path
+        run: node app.js # Make sure this matches your script path
 
       - name: Commit and Push Changes
         run: |
