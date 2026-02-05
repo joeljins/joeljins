@@ -12,6 +12,8 @@
   <img src="https://logos-world.net/wp-content/uploads/2023/02/JavaScript-Emblem.png" width="190" height="100" alt="JavaScript">
   <img src="https://logospng.org/download/css-3/logo-css-3-2048.png" width="100" height="100" alt="CSS"> 
 </div>
+*
+&
 <br>
 
 <div style="display: flex; flex-wrap: wrap; gap: 30px;">
