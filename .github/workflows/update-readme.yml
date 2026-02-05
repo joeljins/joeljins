@@ -3,7 +3,7 @@ name: Update Profile Gallery
 on:
   push:
     paths:
-      - 'my-images/**' # Only runs when you add/change images
+      - 'images/**' # Only runs when you add/change images
   workflow_dispatch: # Allows you to run it manually for testing
 
 jobs:
