@@ -1,1 +1,30 @@
+name: Update Profile Gallery
 
+on:
+  push:
+    paths:
+      - 'my-images/**' # Only runs when you add/change images
+  workflow_dispatch: # Allows you to run it manually for testing
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run Gallery Script
+        run: node scripts/build.js # Make sure this matches your script path
+
+      - name: Commit and Push Changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "Automated gallery update" || echo "No changes to commit"
+          git push
